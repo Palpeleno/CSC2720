@@ -1,3 +1,5 @@
+package hw;
+
 public class Array {
 	private int[] elems;
 	private int nElems;

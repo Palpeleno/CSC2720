@@ -140,4 +140,7 @@ public class LinkedList {
 		return second.value;
 	}
 
+	public void printMiddle(){
+
+	}
 }

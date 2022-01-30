@@ -1,5 +1,7 @@
 package hw;
 
+import javax.swing.event.SwingPropertyChangeSupport;
+
 public class Array {
 	private int[] elems;
 	private int nElems;
@@ -63,4 +65,31 @@ public class Array {
 	public boolean contains(int element) {
 		return (indexOf(element) != -1);
 	}
+
+	public int min() {
+		int first, second;
+		int arr_size = elems.length;
+
+		if (arr_size < 2) {
+			System.out.println(" Invalid inpt");
+		}
+
+		first = second = Integer.MAX_VALUE;
+		for (int i = 0; i < elems.length; i++) {
+			if (elems[i] < first) {
+				second = first;
+				first = elems[i];
+			} else if (elems[i] < second && elems[i] != first)
+				second = elems[i];
+
+		}
+
+		return first;
+
+	}
+
+	public void reverse() {
+
+	}
+
 }

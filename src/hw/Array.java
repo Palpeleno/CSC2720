@@ -1,7 +1,5 @@
 package hw;
 
-import javax.swing.event.SwingPropertyChangeSupport;
-
 public class Array {
 	private int[] elems;
 	private int nElems;
@@ -67,6 +65,8 @@ public class Array {
 	}
 
 	public int min() {
+		// O(n): since the i variable will go through the whole array, until it reaches the length of array
+		// the min number may be at the begining at worse case it will end up at the end of the array
 		int first, second;
 		int arr_size = elems.length;
 
@@ -88,8 +88,17 @@ public class Array {
 
 	}
 
-	public void reverse() {
+	public int[] reverse() {
+		// O(n): the i varaible go through the array until the middle
+		// the middle may be vary far from the beginning of the search 
+		// or it might be closer to the begining of the search in both cases it will still be O(n)
 
+		for (int i = 0; i < elems.length / 2; i++) {  // elem.length / 2 because it iterates until middle of array
+			int temp = elems[i];
+			elems[i] = elems[elems.length - i - 1];
+			elems[elems.length - i - 1] = temp;
+
+		}
+		return elems;
 	}
-
 }

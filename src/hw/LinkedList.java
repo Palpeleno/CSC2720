@@ -140,7 +140,22 @@ public class LinkedList {
 		return second.value;
 	}
 
-	public void printMiddle(){
+	
+	public void printMiddle() {
+			// O(n) : since the while loop itirates the head pointer 
+			// and the and the second pointer must reach the end of the list
+			// for the correct middle number to be displayed 
+		Node oneStep = head;
+		Node twoStep = head;
+		
 
+		while (twoStep != null && twoStep.next != null) {
+			twoStep = twoStep.next.next;
+			oneStep = oneStep.next;
+			
+		}
+
+			System.out.println(oneStep.value);
 	}
+
 }

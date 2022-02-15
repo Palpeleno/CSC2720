@@ -1,50 +1,75 @@
 package labs.lab4;
 
-import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class QueueStack {
+    static Queue<Integer> q1 = new LinkedList<Integer>();
+    static Queue<Integer> q2 = new LinkedList<Integer>();
 
-    private Stack<Integer> stackEat;
-    private Stack<Integer> stackRegerg;
+    static int curr_size;
 
-    public QueueStack(){
-        stackEat = new Stack<>();
-        stackRegerg = new Stack<>();
+    QueueStack() {
+        curr_size = 0;
     }
 
-    public void enQueue(int food){
-        // Push item into s1
-        stackEat.push(food);
-        
-    }
+    void push(int x) {
+        curr_size++;
 
-    // Dequeue an item from the queue
-    public int deQueue() {
-        // if first stack is empty
-        if (stackEat.isEmpty()) {
-            System.out.println("Q is Empty");
-            System.exit(0);
+        // Push x first in empty q2
+        q2.add(x);
+
+        // Push all the remaining
+        // elements in q1 to q2.
+        while (!q1.isEmpty()) {
+            q2.add(q1.peek());
+            q1.remove();
         }
 
-        // Return top of stackEat
-        int x = stackEat.peek();
-        stackEat.pop();
-        return x;
+        // swap the names of two queues
+        Queue<Integer> q = q1;
+        q1 = q2;
+        q2 = q;
     }
 
-    public boolean isEmpty(){
-        return stackEat.isEmpty() && stackRegerg.isEmpty();
+    void pop() {
+
+        // if no elements are there in q1
+        if (q1.isEmpty())
+            return;
+        q1.remove();
+        curr_size--;
     }
 
-    public int peek(){
-        if(isEmpty())
+    int top() {
+        if (q1.isEmpty())
+            return -1;
+        return q1.peek();
+    }
+
+    int size() {
+        return curr_size;
+    }
+
+
+
+    public boolean isEmpty() {
+        return q1.isEmpty() && q2.isEmpty();
+    }
+
+    public int peek() {
+        if (isEmpty())
             throw new IllegalStateException();
 
-        if (stackRegerg.isEmpty()) {
-            int x = stackEat.peek();
-            stackEat.pop();
+        if (q2.isEmpty()) {
+            int x = q1.peek();
+            pop();
             return x;
         }
-        return stackRegerg.peek();
+        return q2.peek();
+    }
+
+    public char[] push() {
+        return null;
     }
 }

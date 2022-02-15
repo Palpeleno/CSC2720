@@ -1,10 +1,21 @@
 package labs.lab5;
 
 public class main {
-    HashTable<Integer, String> hash = new HashTable<Integer, String>();
+    {
+        HashTable<String, Integer> hash = new HashTable<>();
+        hash.put("this", 1);
+        hash.put("coder", 2);
+        hash.put("this", 4);
+        hash.put("hi", 5);
+        System.out.println(hash.size());
+        System.out.println(hash.remove("this"));
+        System.out.println(hash.remove("this"));
+        System.out.println(hash.size());
+        System.out.println(hash.isEmpty());
+    }
 
-        hash.put(1,"Kush");
-        hash.put(2,"Chris");
-        hash.put(3,"Parth");
-        hash.put(4,"Dhru");
+
+
+
+        
 }

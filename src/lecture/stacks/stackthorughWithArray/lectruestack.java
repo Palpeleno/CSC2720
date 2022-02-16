@@ -1,4 +1,4 @@
-package lecture.stackthorughWithArray;
+package lecture.stacks.stackthorughWithArray;
 
 // 
 public class lectruestack {

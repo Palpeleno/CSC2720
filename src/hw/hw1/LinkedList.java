@@ -1,4 +1,4 @@
-package hw;
+package hw.hw1;
 
 import java.util.NoSuchElementException;
 

@@ -19,9 +19,33 @@ public class Main {
 	// return null;
 	// }
 
-	private static Object pairsWithDifference(int i, int[] array2) {
-		
-	return null;
+	// counts the number of distinct inordered pairs of integers that have a
+	// diffrence
+	// equal to or greater than one.
+	// input is the number "d"that is the amount of diffrence we want from the out
+	// put pairs
+	// other input is the array
+	// iterate through array get first array element, add/ subtract the "d". then
+	// search the hash map for those two numbers if they exist add them to a hash
+	// map key value pair
+	private static int pairsWithDifference(int d, int[] array2) {
+		if (d >= 1) {
+			// int count = 0;  // Initialize count
+			HashMap<Integer, Integer> dosHashMap = new HashMap<>();
+
+			for (int i = 0; i < array2.length; i++) {
+				if (dosHashMap.containsKey(array2[i])) {
+					
+				} else {
+					
+					
+				}
+			}
+
+		} else
+			System.out.println("diffrence cannot be less than uqal to 1, you had a \n diffrence of : ");
+		return d;
+
 	}
 
 	// takes array puts in to hash map( since we know the size of array is not that
@@ -33,26 +57,25 @@ public class Main {
 	// then return that element as majority element
 	// {1, 2, 5, 2, 2, 2, 8, 2, 100, 13, 2, 9, 2, 2, 2, 7 }
 	private static int majorityElement(int[] array1) {
-		HashMap<Integer, Integer> alpha = new HashMap<>();
+		HashMap<Integer, Integer> panipuri = new HashMap<>();
 
 		for (int i = 0; i < array1.length; i++) { // traverse through array
-			System.out.println("i="+i); // debug element
-			
+			System.out.println("i=" + i); // debug element
 
-			if (alpha.containsKey(array1[i])) { // if element exist update counter and moves to next element,
-				System.out.println(alpha); // debug element
-				int count = alpha.get(array1[i]) + 1;
-				if (alpha.containsValue((array1.length / 2))) { // if elem exist and more than n/2 print and exit
+			if (panipuri.containsKey(array1[i])) { // if element exist update counter and moves to next element,
+				System.out.println(panipuri); // debug element
+				int count = panipuri.get(array1[i]) + 1;
+				if (panipuri.containsValue((array1.length / 2))) { // if elem exist and more than n/2 print and exit
 					System.out.println("majority element: " + array1[i] + '\n' + "frequency");
 					return count;
 				} else
-					alpha.put(array1[i], count); // if count not larger than length then update key/ value
+					panipuri.put(array1[i], count); // if count not larger than length then update key/ value
 
 			} else
-				alpha.put(array1[i], 1); // if elem not exist add to hash
-			System.out.println(alpha); // debug element
+				panipuri.put(array1[i], 1); // if elem not exist add to hash
+			System.out.println(panipuri); // debug element
 		}
-		System.out.println(alpha); // deubg element
+		System.out.println(panipuri); // deubg element
 		return -1; // if loop ends and makes it here that means there is no majority element
 	}
 

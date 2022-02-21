@@ -15,13 +15,14 @@ public class Main {
 		// System.out.println(containsSubarrayWithSum(5, array3));
 	}
 
-	private static char[] containsSubarrayWithSum(int i, int[] array3) {
-	return null;
-	}
-
-	// private static Object pairsWithDifference(int i, int[] array2) {
+	// private static char[] containsSubarrayWithSum(int i, int[] array3) {
 	// return null;
 	// }
+
+	private static Object pairsWithDifference(int i, int[] array2) {
+		
+	return null;
+	}
 
 	// takes array puts in to hash map( since we know the size of array is not that
 	// big) then makes the elemnts the key and counts

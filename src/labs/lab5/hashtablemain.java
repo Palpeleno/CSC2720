@@ -1,6 +1,6 @@
 package labs.lab5;
 
-public class Main {
+public class hashtablemain {
     
         public static void main(String[] args) {
             

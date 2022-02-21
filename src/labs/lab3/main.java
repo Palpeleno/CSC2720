@@ -1,7 +1,7 @@
 package labs.lab3;
 
 
-public class main {
+public class Main {
     public static void main(String args[]) {
         // create a new string
         StringBuffer s = new StringBuffer("Kush Darji");

@@ -1,6 +1,6 @@
-package hw;
+package hw.hw1;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         int length = 6;
         Array arr = new Array(length);

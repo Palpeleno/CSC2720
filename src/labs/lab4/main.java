@@ -1,6 +1,6 @@
 package labs.lab4;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
 
         QueueStack a = new QueueStack();

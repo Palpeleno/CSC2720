@@ -23,12 +23,14 @@ public class Main {
 		System.out.println(containsSubarrayWithSum(5, array3));
 	}
 
-	private static char[] containsSubarrayWithSum(int i, int[] array3) {
-	return null;
+
+	private static boolean containsSubarrayWithSum(int i, int[] array3) {
+		
+	return true;
 	}
 
 	// this is method 2
-	
+
 	// counts the number of distinct inordered pairs of integers that have a
 	// diffrence
 	// equal to or greater than one.
@@ -80,10 +82,10 @@ public class Main {
 		HashMap<Integer, Integer> panipuri = new HashMap<>();
 
 		for (int i = 0; i < array1.length; i++) { // traverse through array
-			System.out.println("i=" + i); // debug element
+			//System.out.println("i=" + i); // debug element
 
 			if (panipuri.containsKey(array1[i])) { // if element exist update counter and moves to next element,
-				System.out.println(panipuri); // debug element
+				//System.out.println(panipuri); // debug element
 				int count = panipuri.get(array1[i]) + 1;
 				if (panipuri.containsValue((array1.length / 2))) { // if elem exist and more than n/2 print and exit
 					System.out.println("majority element: " + array1[i] + '\n' + "frequency");
@@ -93,9 +95,9 @@ public class Main {
 
 			} else
 				panipuri.put(array1[i], 1); // if elem not exist add to hash
-			System.out.println(panipuri); // debug element
+			//System.out.println(panipuri); // debug element
 		}
-		System.out.println(panipuri); // deubg element
+		//System.out.println(panipuri); // deubg element
 		return -1; // if loop ends and makes it here that means there is no majorityelement
 	}
 

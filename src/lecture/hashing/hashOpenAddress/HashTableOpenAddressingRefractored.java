@@ -1,3 +1,4 @@
+package lecture.hashing.hashOpenAddress;
 // package lecture.hashOpenAddress;
 
 // //  public class HashTableOpenAddressingRefractored {

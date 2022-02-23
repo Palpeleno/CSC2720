@@ -4,7 +4,7 @@ package labs.lab2;
     Lab 2
     Completed
 */
-public class Main {
+public class llmain{
     public static void main(String[] args) {
         LinkedList myL1 = new LinkedList();
 

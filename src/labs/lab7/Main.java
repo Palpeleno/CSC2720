@@ -1,7 +1,5 @@
 package labs.lab7;
 
-import labs.lab7.LinkedList;
-
 public class Main {
 
     public static void main(String[] args) {

@@ -157,11 +157,11 @@ public class hashSepChain<K, V> {
             for (int i = 0; i <numBuckets; i++) {
                 bucketArray.add(null);
             }
-            for(){
-                while (condition) {
+            // for(){
+            //     while (condition) {
                     
-                }
-            }
+            //     }
+            // }
 
 
         }

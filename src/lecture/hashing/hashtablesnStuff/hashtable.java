@@ -1,4 +1,4 @@
-package lecture.hashtablesnStuff;
+package lecture.hashing.hashtablesnStuff;
 
 import java.util.ArrayList;
 import java.util.HashMap;

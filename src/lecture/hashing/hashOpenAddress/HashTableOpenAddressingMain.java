@@ -1,4 +1,4 @@
-package lecture.hashOpenAddress;
+package lecture.hashing.hashOpenAddress;
 
 // public class HashTableOpenAddressingMain {
 

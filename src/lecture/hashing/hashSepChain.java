@@ -158,12 +158,9 @@ public class hashSepChain<K, V> {
                 bucketArray.add(null);
             }
             // for(){
-            //     while (condition) {
-                    
-            //     }
-            // }
 
-
+    
+            
         }
     }
 }

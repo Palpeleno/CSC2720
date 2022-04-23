@@ -1,0 +1,2 @@
+WeightedUndirectedGraphWithDijkstra class implements an undirected graph with weighted edges.
+Contains 3 variations of an implementation of the Dijkstra's algorithm when a graph is represented as adjacency lists. 

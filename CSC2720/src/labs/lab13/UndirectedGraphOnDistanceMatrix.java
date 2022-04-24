@@ -1,18 +1,64 @@
 package labs.lab13;
 
-import java.util.List;
+import java.util.LinkedList;
 
-public class UndirectedGraphOnDistanceMatrix {
+public class UndirectedGraphOnDistanceMatrix implements Comparable<UndirectedGraphOnDistanceMatrix> {
 
-    public void addNode(String string) {
+    NodeWeighted source;
+    NodeWeighted destination;
+    double weight;
+
+    UndirectedGraphOnDistanceMatrix(NodeWeighted s, NodeWeighted d, double w) {
+                source = s;
+                destination = d;
+                weight = w;
+            }
+
+    public String toString() {
+        return String.format("(%s -> %s, %f)", source.name, destination.name, weight);
     }
 
-    public void addEdge(String string, String string2, int i) {
+    // We need this method if we want to use PriorityQueues instead of LinkedLists
+    // to store our edges, the benefits are discussed later, we'll be using
+    // LinkedLists
+    // to make things as simple as possible
+    public int compareTo(UndirectedGraphOnDistanceMatrix otherEdge) {
+
+        // We can't simply use return (int)(this.weight - otherEdge.weight) because
+        // this sometimes gives false results
+        if (this.weight > otherEdge.weight) {
+            return 1;
+        } else
+            return -1;
     }
 
-    public char[] getShortestDistance(String string, String string2, List<String> path) {
-        return null;
+    public class NodeWeighted {
+        // The int n and String name are just arbitrary attributes
+        // we've chosen for our nodes these attributes can of course
+        // be whatever you need
+        int n;
+        String name;
+        private boolean visited;
+        LinkedList<UndirectedGraphOnDistanceMatrix> edges;
+
+        NodeWeighted(int n, String name) {
+            this.n = n;
+            this.name = name;
+            visited = false;
+            edges = new LinkedList<>();
+        }
+
+        boolean isVisited() {
+            return visited;
+        }
+
+        void visit() {
+            visited = true;
+        }
+
+        void unvisit() {
+            visited = false;
+        }
     }
-    
 
 }

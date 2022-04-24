@@ -5,7 +5,7 @@ import java.util.List;
 
 public class UndirectedGraphOnDistanceMatrixMain {
     public static void main(String[] args) {
-        UndirectedGraphOnDistanceMatrix graph = new UndirectedGraphOnDistanceMatrix();
+        UndirectedGraphOnDistanceMatrix graph = new UndirectedGraphOnDistanceMatrix(null, null, 0);
         for (int i = 1; i <= 6; i++) {
             graph.addNode(Integer.toString(i));
         }
